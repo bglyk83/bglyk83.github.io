@@ -113,28 +113,19 @@ button:focus {
   padding: 7rem 1rem 5rem;
   text-align: center;
 }
-
 .home__avatar {
   width: 250px;
   height: 250px;
   border-radius: 100%;
   border: 3px solid var(--color-accent);
-  object-fit: cover;
+  object-fit: cover; /* 이미지가 부모 요소의 크기에 맞춰 비율을 유지하면서 꽉 차도록 설정 */
 }
-
-.home__title {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
 .home__title--string {
   color: var(--color-accent);
 }
-
 .home__description {
   font-size: 1.5rem;
 }
-
 .home__contact {
   display: inline-block;
   background-color: var(--color-accent);
@@ -144,9 +135,66 @@ button:focus {
   font-weight: bold;
   border-radius: 4px;
 }
-
 .home_contact:hover {
   background-color: transparent;
   color: var(--color-text);
   outline: 2px solid var(--color-accent);
+}
+
+/* About */
+.skills {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2.5rem 0;
+}
+
+.skill {
+  background-color: var(--color-primary-variant);
+  padding: 2rem 1rem;
+  color: var(--color-text);
+  border-radius: 1rem;
+  cursor: default;
+  box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.4);
+}
+
+.skill__icon {
+  font-size: 4rem;
+  margin: 1rem 0;
+  color: var(--color-accent);
+  transition: all 300ms ease;
+}
+
+.skill:hover .skill__icon {
+  transform: rotate(-15deg) scale(1.2);
+}
+
+.skill__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.jobs {
+  text-align: start;
+}
+
+.job {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+.job__img {
+  width: 150px;
+  height: 100px;
+}
+
+.job__name {
+  color: var(--color-primary);
+}
+
+.job__period {
+  color: var(--color-primary);
+  font-size: 0.8rem;
 }
