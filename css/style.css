@@ -318,6 +318,10 @@ button:focus {
   border-radius: 8px;
   overflow: hidden;
 }
+.project.anim-out {
+  opacity: 0;
+  transform: scale(0.9) translateY(20px);
+}
 .project__img {
   width: 100%;
 }
