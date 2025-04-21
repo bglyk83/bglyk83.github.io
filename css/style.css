@@ -86,6 +86,9 @@ button:focus {
   align-items: center;
   z-index: 1;
 }
+.header--dark {
+  background-color: var(--color-primary-variant);
+}
 .header__logo {
   display: flex;
   align-items: center;
@@ -97,6 +100,14 @@ button:focus {
 }
 .header__logo__title {
   font-size: 1.8rem;
+}
+.header__toggle {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1.3rem;
+  right: 1rem;
+  display: none;
 }
 .header__menu {
   display: flex;
@@ -118,6 +129,7 @@ button:focus {
   background-color: var(--color-primary);
   color: var(--color-text);
   padding: 7rem 1rem 5rem;
+  padding-top: 7rem;
   text-align: center;
 }
 .home__avatar {
@@ -131,7 +143,7 @@ button:focus {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
-.home__title--string {
+.home__title--strong {
   color: var(--color-accent);
 }
 .home__description {
@@ -153,13 +165,13 @@ button:focus {
 }
 
 /* about */
-.skills {
+.majors {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
   margin: 2.5rem 0;
 }
-.skill {
+.major {
   background-color: var(--color-primary-variant);
   padding: 2rem 1rem;
   color: var(--color-text);
@@ -167,16 +179,16 @@ button:focus {
   cursor: default;
   box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.4);
 }
-.skill__icon {
+.major__icon {
   font-size: 4rem;
   margin: 1rem 0;
   color: var(--color-accent);
   transition: all 300ms ease;
 }
-.skill:hover .skill__icon {
+.major:hover .major__icon {
   transform: rotate(-15deg) scale(1.2);
 }
-.skill__title {
+.major__title {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -207,19 +219,19 @@ button:focus {
   background-color: var(--color-primary-variant);
   color: var(--color-text);
 }
-.tools {
+.skills {
   display: grid;
   grid-template-columns: 6fr 4fr;
   margin: 2rem 3rem;
   border-radius: 8px;
   overflow: hidden;
 }
-.tools__title {
+.skills__title {
   color: var(--color-accent);
   margin: 1rem 0;
   font-size: 1.2rem;
 }
-.tools__coding {
+.skills__coding {
   grid-row: span 2; /* 2개의 행을 차지하도록 설정 */
   padding: 1rem;
   background-color: var(--color-primary);
@@ -243,17 +255,16 @@ button:focus {
   height: 3px;
   background-color: var(--color-accent);
 }
-.tools__tools {
+.skills__tools {
   padding: 1rem;
 }
-.tools__etc {
+.skills__etc {
   padding: 1rem;
   background-color: var(--color-primary);
   filter: brightness(150%);
 }
 
 /* work */
-
 #work {
   background-color: var(--color-primary);
   color: var(--color-text);
@@ -296,24 +307,20 @@ button:focus {
   opacity: 1;
   top: 0;
 }
-
 .projects {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
 }
-
 .project {
   position: relative;
   border-radius: 8px;
   overflow: hidden;
 }
-
 .project__img {
   width: 100%;
 }
-
 .project__metadata {
   position: absolute;
   top: 0;
@@ -329,17 +336,16 @@ button:focus {
   transition: all 250ms ease-in;
   transform: translateY(-10px);
 }
-
 .project__metadata:hover {
   opacity: 0.8;
   transform: translateY(0px);
 }
-
-/* after : 요소 뒤에 가상의 요소를 만들어 주는 선택자 
-  content:""; 아무 내용도 없는 빈 가상 요소를 만듦
-  display: block; 가상 요소를 블럭요소 처럼 만들어서 크기를 줄수 있게 함
+/*
+  after: 요소 뒤에 가상의 요소를 하나 만들어주는 선택자
+  content: "" 아무 내용도 없는 빈 가상 요소를 만듦
+  display: block; 가상 요소를 블록 요소처럼 만들어서 크기를 줄 수 있게 함
 */
-.project__title::after {
+.project__title:after {
   content: "";
   display: block;
   position: relative;
@@ -350,59 +356,54 @@ button:focus {
   height: 2px;
   background-color: var(--color-accent);
 }
+
 /* license */
 .licenses {
   margin: 3rem;
 }
-
 .license {
   display: flex;
   gap: 2rem;
   align-items: center;
   margin-bottom: 2rem;
 }
-
 .license__img {
   width: 150px;
   height: 150px;
   border-radius: 100%;
-  box-shadow: opx 3px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
 }
-
 .license__bubble {
   padding: 1rem;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
 }
-
-.license__bubble__name {
+.license__buble__name {
   color: var(--color-accent);
   font-weight: bold;
   filter: brightness(70%);
 }
 
-/* Arrow */
-
+/* arrow up */
 .arrow-up {
   background-color: var(--color-primary);
   position: fixed;
   bottom: 3rem;
   right: 3rem;
   font-size: 3rem;
-  width: 4, 5rem;
-  height: 4, 5rem;
+  width: 4.5rem;
+  height: 4.5rem;
   border-radius: 100%;
   text-align: center;
-  box-shadow: 5px 5px 0px var(--color-accent);
+  box-shadow: 5px 5px 0px 0px var(--color-accent);
+  opacity: 0;
 }
 
 /* footer */
-
 #contact {
   background-color: var(--color-primary);
   color: var(--color-text);
 }
-
 .contact__links {
   display: flex;
   justify-content: center;
@@ -410,11 +411,85 @@ button:focus {
   padding: 1rem;
   font-size: 2rem;
 }
-
 .contact__link {
   transition: color 250ms ease-in;
 }
-
 .contact__link:hover {
   color: var(--color-accent);
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 3rem 2rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+  .header {
+    flex-direction: column;
+    align-items: start;
+  }
+  .header__toggle {
+    display: block;
+  }
+  .header__menu {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 4rem;
+    gap: 1rem;
+  }
+  .header__menu.open {
+    display: flex;
+  }
+  .header__nav {
+    width: 100%;
+  }
+  #home {
+    padding-bottom: 3rem;
+  }
+  #home__title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .majors {
+    flex-direction: column;
+    align-items: center;
+  }
+  .major {
+    max-width: 25rem;
+  }
+  .job {
+    justify-content: center;
+  }
+  .job__img {
+    width: 150px;
+    height: 100px;
+  }
+  .skills {
+    grid-template-columns: 1fr;
+  }
+
+  .categories {
+    flex-direction: column;
+  }
+  .category {
+    width: 100%;
+  }
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .license {
+    flex-direction: column;
+  }
+  .arrow-up {
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
 }

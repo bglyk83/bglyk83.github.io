@@ -3,30 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ryuzy&#39;s Portfolio</title>
-    <meta name="description" content="우주에서 가장 뛰어난 AI 개발자가 꿈" />
-    <meta name="author" content="Yunki" />
+    <title>Yunki&#39;s Portfolio</title>
     <!-- 소셜 미디어 공유용 메타 태그(Open Graph) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="ko_KR" />
+    <meta name="description" content="우주에서 가장 뛰어난 AI 개발자" />
+    <meta name="author" content="Yunki" />
+
+    <meta property="og:title" content="Yunki&#39; 포트폴리오" />
+    <meta property="og:locle" content="ko_KR" />
     <meta property="og:site_name" content="Yunki&#39; website" />
-    <meta property="og:title" content="Yunki&#39; website" />
+    <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bglyk83.github.io/" />
-    <meta property="og:description" content="안녕하세요! 이윤기입니다." />
+    <meta property="og:description" content="안녕하세요 이윤기입니다." />
     <meta
       property="og:image"
       content="https://bglyk83.github.io/images/profile.png"
     />
-
     <link rel="shortcut icon" href="./images/hero1.ico" type="images/x-icon" />
     <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./JS/main.js"></script>
+    <script defer src="./JS/projects.js"></script>
     <!-- Font Awesome -->
     <script
       src="https://kit.fontawesome.com/133260cff9.js"
       crossorigin="anonymous"
     ></script>
-    <script defer src="./js/main.js"></script>
-    <script defer src="./js/projects.js"></script>
   </head>
   <body>
     <!-- Header 시작-->
@@ -46,7 +46,7 @@
         </ul>
       </nav>
       <button class="header__toggle">
-        <i class="fa-solid fa-bars"></i>
+        <i class="fa-soild fa-bars"></i>
       </button>
     </header>
     <!-- Header 끝-->
@@ -55,18 +55,18 @@
     <main>
       <!-- Home 시작 -->
       <section id="home">
-        <div class="home__container">
+        <div id="home__container">
           <img
             class="home__avatar"
             src="./images/profile.png"
             alt="Yunki's profile"
           />
           <h2 class="home__title">
-            안녕하세요!<br />
-            <strong class="home__title--strong">Yunki Lee</strong>입니다.
+            안녕하세요. <br /><strong class="home__title--strong">이윤기</strong
+            >입니다.
           </h2>
-          <p class="home__description">
-            우주에서 가장 뛰어난 AI 개발자가 되고픈 Yunki입니다!!
+          <p class="home__decription">
+            우주에서 가장 뛰어난 AI 개발자 이윤기입니다!!
           </p>
           <a class="home__contact" href="#contact">연락처</a>
         </div>
@@ -75,7 +75,7 @@
 
       <!-- about 시작 -->
       <section id="about" class="section max-container">
-        <h2 class="title">Yunki</h2>
+        <h2 class="title">Yunki Lee</h2>
         <p class="description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
           earum fuga quam delectus eius? Dolores ut nihil rerum vero sed eum
@@ -101,17 +101,16 @@
             <p>Tensorflow, Python, Pytorch, Numpy</p>
           </li>
         </ul>
-
         <ul class="jobs">
           <li class="job">
-            <img class="job__img" src="./images/people.png" alt="People" />
+            <img class="job__img" src="./images/people.png" alt="people" />
             <div>
               <p class="job__name">경력 사항</p>
               <p class="job__period">경력 기간</p>
             </div>
           </li>
           <li class="job">
-            <img class="job__img" src="./images/free.png" alt="Free" />
+            <img class="job__img" src="./images/free.png" alt="free" />
             <div>
               <p class="job__name">경력 사항</p>
               <p class="job__period">경력 기간</p>
@@ -148,7 +147,7 @@
                   <div class="bar__metadata">
                     <span>CSS</span><span>90%</span>
                   </div>
-                  <div class="bar__bg">
+                  <div bar__bg>
                     <div class="bar__value" style="width: 90%"></div>
                   </div>
                 </li>
@@ -156,7 +155,7 @@
                   <div class="bar__metadata">
                     <span>JavaScript</span><span>80%</span>
                   </div>
-                  <div class="bar__bg">
+                  <div bar__bg>
                     <div class="bar__value" style="width: 80%"></div>
                   </div>
                 </li>
@@ -164,7 +163,7 @@
                   <div class="bar__metadata">
                     <span>Java</span><span>70%</span>
                   </div>
-                  <div class="bar__bg">
+                  <div bar__bg>
                     <div class="bar__value" style="width: 70%"></div>
                   </div>
                 </li>
@@ -172,13 +171,12 @@
                   <div class="bar__metadata">
                     <span>Python</span><span>90%</span>
                   </div>
-                  <div class="bar__bg">
+                  <div bar__bg>
                     <div class="bar__value" style="width: 90%"></div>
                   </div>
                 </li>
               </ul>
             </section>
-
             <section class="skills__tools">
               <h3 class="skills__title">도구</h3>
               <ul>
@@ -189,8 +187,7 @@
                 <li>Xcode</li>
               </ul>
             </section>
-
-            <section class="skills_etc">
+            <section class="skills__etc">
               <h3 class="skills__title">기타</h3>
               <ul>
                 <li>Git</li>
@@ -215,17 +212,17 @@
               </button>
             </li>
             <li>
-              <button class="category" data-category="front-end">
+              <button class="category" data-category="Front-end">
                 Front-end <span class="category__count">3</span>
               </button>
             </li>
             <li>
-              <button class="category" data-category="mobile">
+              <button class="category" data-category="Mobile">
                 Mobile <span class="category__count">3</span>
               </button>
             </li>
             <li>
-              <button class="category" data-category="ai">
+              <button class="category" data-category="AI">
                 AI <span class="category__count">4</span>
               </button>
             </li>
@@ -347,9 +344,9 @@
         <ul class="licenses">
           <li class="license">
             <img
-              class="license__img"
               src="./images/license.png"
               alt="정보처리기사 자격증"
+              class="license__img"
             />
             <div class="license__bubble">
               <p><a href="#" class="license__bubble__name">산업인력공단</a></p>
@@ -363,9 +360,9 @@
           </li>
           <li class="license">
             <img
-              class="license__img"
               src="./images/license.png"
               alt="정보처리기사 자격증"
+              class="license__img"
             />
             <div class="license__bubble">
               <p><a href="#" class="license__bubble__name">산업인력공단</a></p>
@@ -379,9 +376,9 @@
           </li>
           <li class="license">
             <img
-              class="license__img"
               src="./images/license.png"
               alt="정보처리기사 자격증"
+              class="license__img"
             />
             <div class="license__bubble">
               <p><a href="#" class="license__bubble__name">산업인력공단</a></p>
@@ -399,7 +396,7 @@
 
       <!-- Arrow Up 시작 -->
       <aside>
-        <a href="#home" class="arrow-up" title="위로">
+        <a href="#home" title="위로" class="arrow-up">
           <i class="fa-solid fa-arrow-up"></i>
         </a>
       </aside>
@@ -415,24 +412,24 @@
         <ul class="contact__links">
           <li>
             <a
-              class="contact__link"
               href="https://github.com/bglyk83"
               target="_blank"
               title="깃허브"
+              class="contact__link"
               ><i class="fa-brands fa-github"></i
             ></a>
           </li>
           <li>
             <a
-              class="contact__link"
               href="https://github.com/bglyk83"
               target="_blank"
               title="깃허브"
+              class="contact__link"
               ><i class="fa-brands fa-github"></i
             ></a>
           </li>
         </ul>
-        <p>&copy; Yunki - All rights reserved</p>
+        <p>&copy; Yunki Lee - All rights reserved</p>
       </div>
     </footer>
     <!-- Footer 끝 -->
